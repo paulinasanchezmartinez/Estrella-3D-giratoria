@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Graficación (Plano Cartesiano)</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f0f0f0; margin: 0; padding: 20px; }
+        h1 { margin-bottom: 10px; }
+        .controls-top { display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+        .controls-bottom { display: flex; justify-content: center; gap: 5px; flex-wrap: wrap; margin-bottom: 15px; }
+        input { width: 70px; padding: 3px; border: 1px solid #ccc; }
+        canvas { border: 1px solid #333; background-color: white; cursor: crosshair; }
+        button { cursor: pointer; padding: 4px 12px; background: #fff; border: 1px solid #999; border-radius: 3px; }
+        button:hover { background: #eee; }
+        footer { margin-top: 20px; padding: 20px; border-top: 1px solid #ccc; color: #555; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <h1>Graficación (Plano Cartesiano)</h1>
+
+    <div class="controls-top">
+        <label>X:</label> <input type="number" id="x1" value="100">
+        <label>Y:</label> <input type="number" id="y1" value="100">
+        <label>X2:</label> <input type="number" id="x2" value="-100">
+        <label>Y2:</label> <input type="number" id="y2" value="-100">
+        <label>Radio:</label> <input type="number" id="radius" value="50">
+        <label>Separación:</label> <input type="number" id="separacion" value="10">
+        <label>Min Inicio:</label> <input type="number" id="startMin" value="0" min="0" max="59">
+        <label>Seg Inicio:</label> <input type="number" id="startSeg" value="0" min="0" max="59">
+        <button onclick="drawPointBtn()">Punto</button>
+        <button onclick="drawLineBtn()">Línea</button>
+        <button onclick="drawRectangleBtn()">Rectángulo</button>
+    </div>
+
+    <div class="controls-bottom">
+        <button onclick="drawCircleBtn()">Círculo</button>
+        <button onclick="drawTriangleBtn()">Triángulo</button>
+        <button onclick="drawStaticStar()">Dibujar Estrella</button>
+        <button onclick="rotateX()">Rotar X (5°)</button>
+        <button onclick="rotateY()">Rotar Y (5°)</button>
+        <button onclick="rotateZ()">Rotar Z (5°)</button>
+        <button onclick="drawCubeStatic()">Dibujar Cubo</button>
+        <button onclick="rotateCubeX()">Cubo Rotar X</button>
+        <button onclick="rotateCubeY()">Cubo Rotar Y</button>
+        <button onclick="rotateCubeZ()">Cubo Rotar Z</button>
+        <button onclick="drawRect3DStatic()">Dibujar Rectángulo 3D</button>
+        <button onclick="rotateRect3DX()">Rect 3D Rotar X</button>
+        <button onclick="rotateRect3DY()">Rect 3D Rotar Y</button>
+        <button onclick="rotateRect3Z()">Rect 3D Rotar Z</button>
+        <button onclick="clearCanvas()">Limpiar</button>
+        <button onclick="startClock()">Reloj</button>
+        <button onclick="drawPolygonBtn()">Polígono</button>
+        <button onclick="drawTextBtn()">Texto</button>
+        <button onclick="drawImageBtn()">Imagen</button>
+    </div>
+
+    <canvas id="myCanvas" width="600" height="600"></canvas>
+
+    <footer>
+        <p>Derechos reservados &copy; 2026</p>
+        <p><strong>Tecnológico de Tlajomulco</strong></p>
+        <p>Materia: Graficación</p>
+        <p>Profesor: José Angel Torres Rangel</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
